@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TronTech Landing Page</title>
+<style>
+  /* Basic styles */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #03a9f4;
+    text-transform: uppercase;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .product {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #282828;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .product:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .product h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+  }
+  .product p {
+    color: #ccc;
+  }
+  /* Filter styles */
+  .filter {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .filter label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #03a9f4;
+  }
+  .filter select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #282828;
+    color: #e0e0e0;
+  }
+  
+  .product.educational {
+    background-color: #212121;
+  }
+  .product.educational:hover {
+    background-color: #333333;
+  }
+  .product.educational h3 {
+    color: #03a9f4;
+  }
+  .product.educational p {
+    color: #ccc;
+  }
+  footer {
+    background-color: #333333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-radius: 5px;
+  }
+
+  .btn-primary {
+    background-color: #03a9f4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: #039be5;
+  }
+  .section {
+    margin-bottom: 40px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    color: #03a9f4;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .section-content {
+    margin-bottom: 20px;
+  }
+  .highlight {
+    background-color: #424242;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .highlight p {
+    font-weight: bold;
+    color: #e0e0e0;
+  }
+  .testimonial {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .testimonial p {
+    color: #ccc;
+    font-style: italic;
+  }
+  .pricing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .pricing-plan {
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #333333;
+  }
+  .pricing-plan h3 {
+    color: #03a9f4;
+  }
+  .pricing-plan p {
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  .pricing-plan .btn {
+    margin-top: 10px;
+  }
+  .feature-list {
+    list-style: none;
+    padding: 0;
+  }
+  .feature-list li {
+    margin-bottom: 10px;
+  }
+  .feature-list li::before {
+    content: "\2022";
+    color: #03a9f4;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Welcome to TronTech</h1>
+  <!-- Course Filter -->
+  <div class="filter">
+    <label for="filter">Filter by Subject:</label>
+    <select id="filter">
+      <option value="all">All</option>
+      <option value="math">Mathematics</option>
+      <option value="science">Science</option>
+      <option value="language">Language Arts</option>
+      <option value="coding">Coding</option>
+    </select>
+  </div>
+  <!-- Course Display -->
+  <div class="products">
+    <!-- Course 1 -->
+    <div class="product educational math">
+      <img src="math.jpg" alt="Math Course">
+      <h3>Introduction to Algebra</h3>
+      <p>$49.99</p>
+      <p class="course-description">A beginner-friendly course covering basic algebraic concepts.</p>
+      <a href="#" class="btn-primary">Enroll Now</a>
+    </div>
+    <!-- Course 2 -->
+    <div class="product educational science">
+      <img src="science.jpg" alt="Science Course">
+      <h3>Biology Basics</h3>
+      <p>$59.99</p>
+      <p class="course-description">Learn the fundamental principles of biology in this comprehensive course.</p>
+      <a href="#" class="btn-primary">Enroll Now</a>
+    </div>
+    <!-- Course 3 -->
+    <div class="product educational language">
+      <img src="language.jpg" alt="Language Arts Course">
+      <h3>English Literature</h3>
+      <p>$39.99</p>
+      <p class="course-description">Explore classic literary works and enhance your understanding of English literature.</p>
+      <a href="#" class="btn-primary">Enroll Now</a>
+    </div>
+    <!-- Course 4 -->
+    <div class="product educational coding">
+      <img src="coding.jpg" alt="Coding Course">
+      <h3>Web Development Fundamentals</h3>
+      <p>$79.99</p>
+      <p class="course-description">Get started with web development by learning HTML, CSS, and JavaScript.</p>
+      <a href="#" class="btn-primary">Enroll Now</a>
+    </div>
+    <!-- Add more courses as needed -->
+  </div>
+  <!-- Additional sections -->
+  <section class="section">
+    <h2 class="section-title">Why Choose TronTech?</h2>
+    <div class="highlight">
+      <p>TronTech provides cutting-edge courses and expert instructors to help you succeed in the tech industry.</p>
+    </div>
+    <div class="testimonial">
+      <p>"TronTech's courses have been instrumental in advancing my career. Highly recommended!"</p>
+      <p>- Jane Smith</p>
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="section-title">Our Pricing Plans</h2>
+    <div class="pricing">
+      <div class="pricing-plan">
+        <h3>Basic</h3>
+        <p>$19.99/month</p>
+        <ul class="feature-list">
+          <li>Access to all courses</li>
+          <li>Basic support</li>
+        </ul>
+        <a href="#" class="btn-primary">Choose Plan</a>
+      </div>
+      <div class="pricing-plan">
+        <h3>Pro</h3>
+        <p>$39.99/month</p>
+        <ul class="feature-list">
+          <li>Access to all courses</li>
+          <li>Premium support</li>
+          <li>Certificate of Completion</li>
+        </ul>
+        <a href="#" class="btn-primary">Choose Plan</a>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 TronTech. All rights reserved.</p>
+</footer>
+<script>
+  // Filter courses
+  document.getElementById('filter').addEventListener('change', function() {
+    const subject = this.value;
+    const courses = document.querySelectorAll('.product');
+    courses.forEach(course => {
+      if (subject === 'all' || course.classList.contains(subject)) {
+        course.style.display = 'block';
+      } else {
+        course.style.display = 'none';
+      }
+    });
+  });
+</script>
+</body>
+</html>
